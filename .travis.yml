@@ -13,6 +13,6 @@ branches:
   only:
     - master
 script:
-  - sudo docker build -t srp33/shinylearner_environment_gpu:version2 .
+  - sudo docker build -t srp33/shinylearner_environment_gpu:version3 .
   - sudo docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
-  - sudo docker push srp33/shinylearner_environment_gpu:version2
+  - sudo docker push srp33/shinylearner_environment_gpu:version3

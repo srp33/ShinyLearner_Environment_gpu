@@ -28,6 +28,7 @@ RUN conda install scipy numpy scikit-learn pandas keras tensorflow-gpu
 ######################################################################################
 
 RUN apt-get update && apt-get install -y --no-install-recommends openjdk-8-jre-headless
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 
 ######################################################################################
 # Install R.
