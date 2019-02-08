@@ -14,15 +14,14 @@ ENV TZ=America/Denver
 # Install and configure packages.
 ####################################################################################
 
-RUN ls
-#RUN apt-get update && \
-#  apt-get install -y wget zip && \
-#  wget https://github.com/srp33/ShinyLearner_Environment/archive/master.zip && \
-#  unzip master.zip && \
-#  rm master.zip && \
-#  mv ShinyLearner_Environment-master/install*.sh . && \
-#  rm -rf ShinyLearner_Environment-master && \
-#  bash install_debian_packages.sh && \
+RUN apt-get update && \
+  apt-get install -y wget zip && \
+  wget https://github.com/srp33/ShinyLearner_Environment/archive/master.zip && \
+  unzip master.zip && \
+  rm master.zip && \
+  mv ShinyLearner_Environment-master/install*.sh . && \
+  rm -rf ShinyLearner_Environment-master && \
+  bash install_debian_packages.sh
 #  bash install_r_packages.sh && \
 #  sed -i "s|tensorflow|tensorflow_gpu|g" install_python_packages.sh && \
 #  bash install_python_packages.sh
