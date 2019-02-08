@@ -21,7 +21,7 @@ RUN apt-get update && \
   rm master.zip && \
   mv ShinyLearner_Environment-master/install*.sh . && \
   rm -rf ShinyLearner_Environment-master && \
-  bash install_debian_packages.sh
+  bash install_debian_packages.sh && \
   bash install_r_packages.sh && \
   sed -i "s|tensorflow|tensorflow-gpu|g" install_python_packages.sh && \
   bash install_python_packages.sh
