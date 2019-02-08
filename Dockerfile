@@ -14,8 +14,7 @@ ENV TZ=America/Denver
 # Install and configure packages.
 ####################################################################################
 
-RUN docker image ls
-
+RUN ls
 #RUN apt-get update && \
 #  apt-get install -y wget zip && \
 #  wget https://github.com/srp33/ShinyLearner_Environment/archive/master.zip && \
