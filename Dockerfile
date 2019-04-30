@@ -25,10 +25,4 @@ RUN apt-get update && \
   bash install_debian_packages.sh && \
   bash install_r_packages.sh && \
   sed -i "s|tensorflow|tensorflow-gpu|g" install_python_packages.sh && \
-  bash install_python_packages.sh && \
-  chmod +x /usr/local/bin/entrypoint.sh
-
-VOLUME /InputData
-VOLUME /OutputData
-
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+  bash install_python_packages.sh
