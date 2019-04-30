@@ -20,7 +20,6 @@ RUN apt-get update && \
   unzip master.zip && \
   rm master.zip && \
   mv ShinyLearner_Environment-master/install*.sh . && \
-  mv ShinyLearner_Environment-master/entrypoint.sh /usr/local/bin/entrypoint.sh && \
   rm -rf ShinyLearner_Environment-master && \
   bash install_debian_packages.sh && \
   bash install_r_packages.sh && \
