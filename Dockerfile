@@ -6,7 +6,6 @@ FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:$PATH
-ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
 ENV TZ=America/Denver
 
 ####################################################################################
@@ -25,3 +24,6 @@ RUN apt-get update && \
   bash install_r_packages.sh && \
   sed -i "s|tensorflow|tensorflow-gpu|g" install_python_packages.sh && \
   bash install_python_packages.sh
+
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
+RUN export JAVA_HOME
