@@ -14,3 +14,7 @@ git add .travis.yml
 git add --all .
 git commit -m "$message"
 git push origin master
+
+docker build -t srp33/shinylearner_environment_gpu:version$(cat VERSION) .
+docker login
+docker push srp33/shinylearner_environment_gpu:version$(cat VERSION)

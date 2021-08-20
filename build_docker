@@ -1,5 +1,0 @@
-#!/bin/bash
-
-version=$(cat VERSION)
-
-docker build -t srp33/shinylearner_environment_gpu:version${version} .
