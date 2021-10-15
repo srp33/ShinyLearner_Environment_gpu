@@ -8,9 +8,8 @@ then
   exit 1
 fi
 
-python UpdateVersion.py travis.yml.template VERSION .travis.yml
+python UpdateVersion.py VERSION
 
-git add .travis.yml
 git add --all .
 git commit -m "$message"
 git push origin master
